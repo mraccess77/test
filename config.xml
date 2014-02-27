@@ -2,7 +2,7 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.ssbbartgroup.test"
-        version   = "1.0.0">
+        version   = "1.0.1">
 
     <!-- versionCode is optional and Android only -->
 
@@ -15,6 +15,10 @@
     <author href="https://www.ssbbartgroup.com" email="jon@ssbbartgroup.com">
         Jonathan Avila 
     </author>
-		<gap:platform name="ios" />
+    <access
+origin="https://ssl.gstatic.com/accessibility/javascript/android*"/>
+<!-- allow enhanced accessibility
+ -->
+     </access>
 
 </widget>

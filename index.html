@@ -12,5 +12,51 @@
   <input role="textbox" class="timeInput" type="time" id="endTime" style="margin-left: 33px;"  aria-labelledby="endTimeLabel"  onchange="onTimeChange()" onblur="endTimeBlur();"/>
 </div>
 <button>three</button>
+
+<html>
+  <head>
+   <style type="text/css">
+     #a1::before {
+       content: "t";
+     }
+   </style>
+    <script type="text/javascript">
+       document.onload = run();
+       
+       function test(e) {
+          var evt = e ? e : window.event;
+           var d = document.createElement("div");
+           var t = document.createTextNode(evt.type+" " +evt.target);
+           d.appendChild(t);
+           document.getElementById("d1").appendChild(d);
+       }
+       function run() {
+          var d = document.createElement("div");
+           var t = document.createTextNode("hello");
+           d.appendChild(t);
+          document.getElementById("d1").appendChild(d);
+       }
+    </script>
+  </head>
+  <body>
+   <div id="d1">
+    <select title="Entry" type="text" onfocus="test(event);" onblur="test(event);" onclick="test(event);" ondbclick="test(event);" onmouseup="test(event);"  onkeypress="test(event);" onchange="test(event);">
+      <option> Apple </option>
+      <option> Cherry</option>
+      <option> Pumpkin</option>
+    </select>
+
+    <input title="Entry" type="text" onfocus="test(event);" onblur="test(event);" onclick="test(event);" ondbclick="test(event);" onmouseup="test(event);"  onkeypress="test(event);" onchange="test(event);"/>
+    <button onfocus="test(event);" onblur="test(event);" onclick="test(event);" ondbclick="test(event);" onmouseup="test(event);"  onkeypress="test(event);"> Test </button>
+    <a aria-label="jason" tabindex="0" href="#" id="a1" onfocus="test(event);" onblur="test(event);" onclick="test(event);" ondbclick="test(event);" onmouseup="test(event);"  onkeydown="test(event);" aria-haspopup="true" onkeypress="test(event);">op</a>
+    <h3>Log area</h3>
+    <div id="d1" aria-live="polite" >
+
+    </div>
+   </div>
+  </body>
+</html>
+
+
 </body>
 </html>
